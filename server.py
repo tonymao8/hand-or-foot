@@ -32,7 +32,7 @@ def predict_image_from_bytes(input_bytes):
 
 
 app = Starlette(debug=True)
-classes = ['foot', 'hand']
+classes = ['sedan', 'hatchback', 'convertible']
 defaults.device = torch.device('cpu')
 learn = load_learner('models')
 
@@ -79,10 +79,10 @@ def form(request):
 
     <div id="blueBox">       
     <div style="text-align:center">
-    <h1> Suffering from Phalanges Agnosia? </h2>
+    <h1> Have problems identifying cars? </h2>
     
     <p>
-    <h3> Suffer no more, this web-app can help you tell the difference between a hand and a foot </h2>
+    <h3> Suffer no more, this web-app can help you tell the difference between a convertible, sedan and hatchback</h2>
     </div>
     <p>
     <p>
